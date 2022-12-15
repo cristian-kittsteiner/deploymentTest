@@ -6,7 +6,7 @@ let sql = postgres('postgres://movies_86sz_user:DkaDXy0xEwgOFhgtFtl0XFpHyHsSjgee
 
 let app = express();
 app.use(express.json());
-app.use(express.static("../client"));
+app.use(express.static("./client"));
 //app.use(cors());
 
 // app.get('/movies', async (req, res) => {
