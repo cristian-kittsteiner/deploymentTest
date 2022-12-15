@@ -1,6 +1,6 @@
 import express from "express";
 import postgres from "postgres"; 
-
+import cors from "cors";
 let app = express();
 
 let sql = postgres({
@@ -8,7 +8,9 @@ let sql = postgres({
     password : '0'
 });
 
-app.use(express.json())
+app.use(express.json());
+app.use(cors());
+app.use(express.static("./client"));
 
 // app.get('/movies', async (req, res) => {
 //     res.send( await sql`SELECT * FROM movies`)
@@ -16,7 +18,7 @@ app.use(express.json())
 
 app.get('/movies', (req, res) => {
     sql`SELECT * FROM movies`.then( result => {
-        res.send(result);
+        res.json(result);
     })
 })
 
