@@ -1,22 +1,19 @@
 import express from "express";
 import postgres from "postgres"; 
-import cors from "cors";
+//import cors from "cors";
+
+let sql = postgres('postgres://movies_86sz_user:DkaDXy0xEwgOFhgtFtl0XFpHyHsSjgee@dpg-cedngmcgqg43c91lt0pg-a.oregon-postgres.render.com/movies_86sz');
+
 let app = express();
-
-let sql = postgres({
-    database : 'movies',
-    password : '0'
-});
-
 app.use(express.json());
-app.use(cors());
-app.use(express.static("./client"));
+app.use(express.static("../client"));
+//app.use(cors());
 
 // app.get('/movies', async (req, res) => {
 //     res.send( await sql`SELECT * FROM movies`)
 // })
 
-app.get('/movies', (req, res) => {
+app.get('/api/movies', (req, res) => {
     sql`SELECT * FROM movies`.then( result => {
         res.json(result);
     })

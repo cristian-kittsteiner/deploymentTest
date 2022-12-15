@@ -5,7 +5,9 @@
   "description": "testing suite for sql",
   "main": "routes.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "routes.js",
+    "dev":"npx nodemon routes.js"
   },
   "author": "",
   "license": "ISC",
