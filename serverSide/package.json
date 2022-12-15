@@ -1,0 +1,17 @@
+{
+  "name": "test",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "testing suite for sql",
+  "main": "routes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "postgres": "^3.3.2"
+  }
+}

@@ -1,0 +1,12 @@
+Create database  check
+Create tables  check
+Insert data  check
+
+Initialize npm  check
+Install npm dependencies - express, nodemon, postgres   check
+
+
+Create server file
+Create server
+Connect to our database
+Create some routes
