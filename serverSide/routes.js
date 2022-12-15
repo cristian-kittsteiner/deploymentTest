@@ -5,7 +5,7 @@ let app = express();
 
 let sql = postgres({
     database : 'movies',
-    password : 'Kryzztian1!'
+    password : '0'
 });
 
 app.use(express.json())
