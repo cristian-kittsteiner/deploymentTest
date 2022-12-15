@@ -2,7 +2,7 @@ import express from "express";
 import postgres from "postgres"; 
 //import cors from "cors";
 
-let sql = postgres('postgres://movies_86sz_user:DkaDXy0xEwgOFhgtFtl0XFpHyHsSjgee@dpg-cedngmcgqg43c91lt0pg-a.oregon-postgres.render.com/movies_86sz');
+let sql = postgres('postgres://movies_86sz_user:DkaDXy0xEwgOFhgtFtl0XFpHyHsSjgee@dpg-cedngmcgqg43c91lt0pg-a.oregon-postgres.render.com/movies_86sz?ssl=true');
 
 let app = express();
 app.use(express.json());
